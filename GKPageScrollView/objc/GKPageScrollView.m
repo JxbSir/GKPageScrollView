@@ -49,6 +49,8 @@
         self.ceilPointHeight = GKPAGE_NAVBAR_HEIGHT;
         self.validListDict = [NSMutableDictionary new];
         
+        _mainCellBackgroundColor = UIColor.white;
+        
         [self initSubviews];
     }
     return self;
@@ -370,6 +372,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.backgroundColor = self.mainCellBackgroundColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     CGFloat width  = self.frame.size.width == 0 ? GKPAGE_SCREEN_WIDTH : self.frame.size.width;

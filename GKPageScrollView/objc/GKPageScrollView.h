@@ -171,6 +171,9 @@
 // 是否内部控制指示器的显示与隐藏（默认为NO）
 @property (nonatomic, assign) BOOL              isControlVerticalIndicator;
 
+// 主GKPageTableView的cell背景色
+@property (nonatomic, strong) UIColor           *mainCellBackgroundColor;
+
 - (instancetype)initWithDelegate:(id <GKPageScrollViewDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
